@@ -7,6 +7,7 @@ import jwt_Decode from "jwt-decode";
 import Nav from "./Nav";
 import JoblyApi from "./joblyApi";
 import userContext from "./userContext";
+import './photos/logoutDesktop.jpeg'
 
 /** Loads initial app
  * 

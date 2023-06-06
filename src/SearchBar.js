@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './SearchBar.css'
 
 /** Form for searching companies and/or jobs
  *
@@ -32,16 +33,16 @@ function SearchBar({handleSearch}) {
   return (
     <form className='m-3' onSubmit={handleSubmit}>
 
-      <div className="d-flex ">
+      <div className="">
         <input
-          className=""
+          className="input"
           placeholder="Enter Search Term..."
           id="searchTerm"
           name="searchTerm"
           value={searchTerm}
           onChange={handleChange}
         />
-        <button className="btn btn-primary btn-sm">Search</button>
+        <button className="searchBtn">Search</button>
       </div>
     </form>
   );

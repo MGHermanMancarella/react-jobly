@@ -1,5 +1,5 @@
 React-Jobly Authorization, Tokens, and Things Elie Warned us About...
-
+<!-- 
 1. Login / Signup (forms)
    - Get Token (api response)
 2. setToken (state)
@@ -101,4 +101,27 @@ UseEffect [token]
   display not-logged-in JSX
   : 
   display logged in JSX
+ -->
 
+For fun stuff:
+
+1. fix forms
+   - alignment
+   - spacing
+   - etc
+
+2. homepage 
+   - fix alignment of welcome
+   - edit hero tag to something like "take your job search into the 21st century"
+   - Change background on login
+
+3. Re-deploy
+Write them forms, baby
+- [ ] login form
+  - [x] Props: login Fn
+  - [x] Fields:
+    - [x] Username
+    - [x] Password
+  - [ ] FlashMessage
+    - [ ] alert alert-danger 
+      - Insomnia returns {error:{message:"invalid username/password", Status:401}}

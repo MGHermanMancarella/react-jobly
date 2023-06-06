@@ -1,5 +1,17 @@
+
+
 .JobCard {
-    border: solid black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 1em;
+    border:  hsla(0, 0%, 0%, 0.5);
+    width: 90%;
     margin: 1em;
-    width:60%;
-}
+  background-color: hsla(0, 0%, 0%, 0.5);
+  
+  }
+
+  

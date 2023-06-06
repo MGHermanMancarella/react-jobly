@@ -15,9 +15,9 @@ function JobCard({ job }) {
             <h2>{job.title}</h2>
             <h3>{job.companyHandle}</h3>
             {job.salary && 
-                <h5>💸💸Salary: {job.salary}💸💸</h5>
+                <h5>Salary: {job.salary}</h5>
             }
-            <h5>💹💹Equity: {job.equity}💹💹</h5>
+            <h5>Equity: {job.equity}</h5>
         </div>
     )
 }

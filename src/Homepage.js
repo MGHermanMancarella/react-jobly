@@ -4,14 +4,13 @@ import Nav from "./Nav";
 import { Link } from "react-router-dom";
 import JoblyApi from "./joblyApi";
 import userContext from "./userContext";
-
-
+import "./Homepage.css";
 
 /** Loads starting homepage
  *
- * * Props: 
+ * * Props:
  * - none
- * 
+ *
  * RoutesList -> Homepage
  */
 
@@ -19,24 +18,25 @@ function Homepage() {
   const { currentUser } = useContext(userContext);
 
   return (
-    <div>
+    <div className='main'>
+      <div className='sub'>
         <div>
           <h1>Find a job that works for you!</h1>
-          <p>
-            All the jobs, every one of them, in one convenient place.
-          </p>
+          <p>All the jobs, every one of them, in one convenient place.</p>
         </div>
-        {currentUser 
-          ? 
+        {currentUser ? (
           <h2>Welcome back, {currentUser.firstName}</h2>
-          :
+        ) : (
           <div>
-            <Link to='/login'><button>Login</button></Link>
-            <Link to='/signup'><button>Signup</button></Link>
+            <Link to='/login'>
+              <button>Login</button>
+            </Link>
+            <Link to='/signup'>
+              <button>Signup</button>
+            </Link>
           </div>
-        }
-        
-
+        )}
+      </div>
     </div>
   );
 }

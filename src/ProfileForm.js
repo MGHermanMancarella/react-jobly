@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import userContext from "./userContext";
-
+import { Form, FormGroup, Label, Input, Alert } from 'reactstrap';
 /** Renders signup or profile form
  *
  * Props:
@@ -46,61 +45,72 @@ function ProfileForm({ editProfile }) {
   }
 
   return (
-    <div>
-      <h3>Edit Profile</h3>
-      <form>
-        <div>
-          <label htmlFor='username'>Username</label>
-          <input
+  
+      <Form style={
+       { backgroundColor: 'black',
+        color: 'rgba(255, 255, 255, 1)',
+        opacity: '100%'}
+      } 
+      className='col-md-4 container'>
+
+      <div className='title my-3'>
+        <h3>Edit Profile</h3>
+      </div>
+
+        <FormGroup>
+          <Label htmlFor='username'>Username</Label>
+          <Input
+          className="input"
             disabled
             id='username'
             name='username'
             value={currentUser.username}
-          ></input>
-        </div>
+          ></Input>
+        </FormGroup>
 
-        <div>
-          <label htmlFor='firstName'>First Name</label>
-          <input
+        <FormGroup>
+          <Label htmlFor='firstName'>First Name</Label>
+          <Input
+          className="input"
             id='firstName'
             name='firstName'
             value={formData.firstName}
             onChange={handleChange}
-          ></input>
-        </div>
+          ></Input>
+        </FormGroup>
 
-        <div>
-          <label htmlFor='lastName'>Last Name</label>
-          <input
+        <FormGroup>
+          <Label htmlFor='lastName'>Last Name</Label>
+          <Input
+          className="input"
             id='lastName'
             type='lastName'
             name='lastName'
             value={formData.lastName}
             onChange={handleChange}
-          ></input>
-        </div>
+          ></Input>
+        </FormGroup>
 
-        <div>
-          <label htmlFor='email'>Email</label>
-          <input
+        <FormGroup>
+          <Label htmlFor='email'>Email</Label>
+          <Input
+          className="input"
             id='email'
             name='email'
             value={formData.email}
             onChange={handleChange}
-          ></input>
-        </div>
+          ></Input>
+        </FormGroup>
 
-        {flashMessage && (
-          <div>
-            {flashMessage.map((message, index) => (
-              <p key={index}>{message}</p>
-            ))}
-          </div>
-        )}
+        {flashMessage && flashMessage.map((message, index) => (
+          <Alert color='danger' className='text-center ' key={index}>
+            {message}
+          </Alert>
+        ))}
 
         <button onClick={handleSubmit}>Submit</button>
-      </form>
-    </div>
+      </Form>
+
   );
 }
 

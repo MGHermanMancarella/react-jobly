@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./forms.css"
+import { Form, FormGroup, Label, Input, Alert, Button } from 'reactstrap';
+
+
 
 /** Renders signup or profile form
  * 
@@ -49,74 +53,79 @@ function SignUpForm({ signup }) {
     }));
   }
 
+
   return (
-    <div>
-      <h3>Sign up</h3>
-      <form>
-        <div>
-          <label htmlFor='username'>Username</label>
-          <input
+      <Form className='col-md-4 container'>
+        <div className='title my-3'>
+          <h3>Sign up</h3>
+        </div>
+  
+        {flashMessage && flashMessage.map((message, index) => (
+          <Alert color='danger' className='text-center ' key={index}>
+            {message}
+          </Alert>
+        ))}
+  
+        <FormGroup>
+          <Label htmlFor='username'>Username</Label>
+          <Input
+          className="input"
             id='username'
             name='username'
             value={formData.username}
             onChange={handleChange}
-          ></input>
-        </div>
-
-        <div>
-          <label htmlFor='password'>Password</label>
-          <input
+          />
+        </FormGroup>
+  
+        <FormGroup>
+          <Label htmlFor='password'>Password</Label>
+          <Input
+          className="input"
             id='password'
             type='password'
             name='password'
             value={formData.password}
             onChange={handleChange}
-          ></input>
-        </div>
-
-        <div>
-          <label htmlFor='firstName'>First Name</label>
-          <input
+          />
+        </FormGroup>
+  
+        <FormGroup>
+          <Label htmlFor='firstName'>First Name</Label>
+          <Input
+          className="input"
             id='firstName'
             name='firstName'
             value={formData.firstName}
             onChange={handleChange}
-          ></input>
-        </div>
-
-        <div>
-          <label htmlFor='lastName'>Last Name</label>
-          <input
+          />
+        </FormGroup>
+  
+        <FormGroup>
+          <Label htmlFor='lastName'>Last Name</Label>
+          <Input
+          className="input"
             id='lastName'
-            type='lastName'
             name='lastName'
             value={formData.lastName}
             onChange={handleChange}
-          ></input>
-        </div>
-        
-        <div>
-          <label htmlFor='email'>Email</label>
-          <input
+          />
+        </FormGroup>
+  
+        <FormGroup>
+          <Label htmlFor='email'>Email</Label>
+          <Input
+          className="input"
             id='email'
             name='email'
             value={formData.email}
             onChange={handleChange}
-          ></input>
-        </div>
-
-        {flashMessage && (
-          <div>
-            {flashMessage.map((message, index) => (
-              <p key={index}>{message}</p>
-            ))}
-          </div>
-        )}
-
+          />
+        </FormGroup>
+  
         <button onClick={handleSubmit}>Submit</button>
-      </form>
-    </div>
-  );
+      </Form>
+    );
+  
 }
 
 export default SignUpForm;

@@ -1,0 +1,14 @@
+.main {
+
+
+  margin-top: 20%;
+  font-weight: bold;
+}
+
+.sub {
+  justify-content: start;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
