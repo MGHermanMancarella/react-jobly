@@ -1,17 +1,12 @@
-
-
 .JobCard {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding-left: 1em;
-    border:  hsla(0, 0%, 0%, 0.5);
-    width: 90%;
-    margin: 1em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 1em;
+  border: hsla(0, 0%, 0%, 0.5);
+  width: 90%;
+  margin: 1em;
   background-color: hsla(0, 0%, 0%, 0.5);
-  
-  }
-
-  
+}
