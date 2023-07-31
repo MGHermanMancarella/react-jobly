@@ -55,7 +55,7 @@ function SignUpForm({ signup }) {
 
 
   return (
-      <Form className='col-md-4 container'>
+      <Form className='col-md-4 mt-5 container'>
         <div className='title my-3'>
           <h3>Sign up</h3>
         </div>

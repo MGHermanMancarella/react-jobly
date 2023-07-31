@@ -14,7 +14,7 @@ import "./forms.css";
 function LoginForm({ login }) {
   const navigate = useNavigate();
 
-  const initialState = { username: "", password: "" };
+  const initialState = { username: "TestUser", password: "" };
   const [formData, setFormData] = useState(initialState);
   const [flashMessage, setFlashMessage] = useState(null);
 
@@ -44,7 +44,7 @@ function LoginForm({ login }) {
   }
 
   return (
-    <Form className='col-md-4 container'>
+    <Form className='col-md-4 mt-5 container'>
       <div className="text-center">
         <h3>Log in</h3>
       </div>
@@ -66,6 +66,7 @@ function LoginForm({ login }) {
           id='password'
           type='password'
           name='password'
+          placeholder='type "password"'
           value={formData.password}
           onChange={handleChange}
         ></Input>
