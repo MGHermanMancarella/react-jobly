@@ -18,19 +18,19 @@ function Nav({ logout }) {
       <nav className='nav'>
         {currentUser && (
           <div className='main-nav'>
-            <NavLink to='/' end>
+            <NavLink to='/' >
               Jobly
             </NavLink>
-            <NavLink to='/companies' end>
+            <NavLink to='/companies' >
               CompanyList
             </NavLink>
-            <NavLink to='/jobs' end>
+            <NavLink to='/jobs' >
               JobList
             </NavLink>
-            <NavLink to='/profile' end>
+            <NavLink to='/profile' >
               Profile
             </NavLink>
-            <Link to='/' onClick={logout} end>
+            <Link to='/' onClick={logout} >
               Log out {currentUser.username}
             </Link>
           </div>
@@ -38,13 +38,13 @@ function Nav({ logout }) {
 
         {!currentUser && (
           <div className='main-nav'>
-            <NavLink to='/' end>
+            <NavLink to='/' >
               Jobly
             </NavLink>
-            <NavLink to='/login' end>
+            <NavLink to='/login' >
               Login
             </NavLink>
-            <NavLink to='/signup' end>
+            <NavLink to='/signup' >
               Signup
             </NavLink>
           </div>
