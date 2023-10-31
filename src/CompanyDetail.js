@@ -26,7 +26,7 @@ function CompanyDetail() {
             return response;
         }
         getCompanyDetail();
-    }, []);
+    }, [handle]);
 
     if (!companyDetail) {
         return <h1>Loading...</h1>
