@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import axios from "axios";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
+const BASE_URL = "https://izf7zveh3h.execute-api.us-west-1.amazonaws.com/dev/";
 
 /** API Class.
  *
@@ -32,7 +32,7 @@ class JoblyApi {
     try {
       return (await axios({ url, method, data, params, headers })).data;
     } catch (err) {
-      // console.error("API Error:", err.response);
+      console.error("API Error:", err.response);
       let message = err.response.data.error.message;
       throw Array.isArray(message) ? message : [message];
     }
@@ -92,6 +92,7 @@ class JoblyApi {
    */
 
   static async login(data) {
+    console.log("api data login ->>", data)
     let res = await this.request(`auth/token/`, data, "post");
     return res.token;
   }
